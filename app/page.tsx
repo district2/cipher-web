@@ -28,7 +28,7 @@ export default function Home() {
         <div className="bg-neutral-950 flex flex-col gap-y-4 p-5 rounded-lg w-56 h-44">
           <Image src={ui} alt={"User interface icon"} className="invert opacity-80" />
           <p>
-            New refreshed UI based on our custom 'seamless' design
+            New refreshed UI based on our custom &apos;seamless&apos; design
           </p>
         </div>
         <div className="bg-neutral-950 flex flex-col gap-y-4 p-5 rounded-lg w-56 h-44">
