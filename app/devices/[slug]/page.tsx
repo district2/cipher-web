@@ -10,9 +10,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 }
 
 export async function generateStaticParams() {
-    const { data: devices } = await supabase.from('device').select('code_name');
+    const { data: devices, error } = await supabase.from('device').select('code_name');
+    if (error)
+        throw new Error("Unable to fetch devices")
 
-    return devices?.map(({ code_name }) => { code_name })
+    return devices.map(({ code_name }) => { code_name })
 }
 
 export default async function Device({ params }: { params: { slug: string } }) {
