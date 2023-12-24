@@ -37,7 +37,7 @@ export default function Navbar() {
                     {items}
                 </div>
                 <div className="lg:hidden">
-                    <Image src={isShown ? x : menu} alt="menu icon" className="dark:invert cursor-pointer" onClick={() => setShown(!isShown)}></Image>
+                    <Image src={isShown ? x : menu} alt="menu icon" className="cursor-pointer" onClick={() => setShown(!isShown)}></Image>
                 </div>
             </div>
 

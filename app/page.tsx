@@ -26,25 +26,25 @@ export default function Home() {
       </div>
       <div className="flex flex-wrap justify-center gap-5">
         <div className="bg-neutral-950 flex flex-col gap-y-4 p-5 rounded-lg w-56 h-44">
-          <Image src={ui} alt={"User interface icon"} className="invert opacity-80" />
+          <Image src={ui} alt={"User interface icon"} className="opacity-80" />
           <p>
             New refreshed UI based on our custom &apos;seamless&apos; design
           </p>
         </div>
         <div className="bg-neutral-950 flex flex-col gap-y-4 p-5 rounded-lg w-56 h-44">
-          <Image src={shield} alt={"Shield icon"} className="invert opacity-80" />
+          <Image src={shield} alt={"Shield icon"} className="opacity-80" />
           <p>
             Stay always up-to date with latest security patches
           </p>
         </div>
         <div className="bg-neutral-950 flex flex-col gap-y-4 p-5 rounded-lg w-56 h-44">
-          <Image src={battery} alt={"Battery icon"} className="invert opacity-80" />
+          <Image src={battery} alt={"Battery icon"} className="opacity-80" />
           <p>
             Background services are stripped down to minimal to preserve battery life
           </p>
         </div>
         <div className="bg-neutral-950 flex flex-col gap-y-4 p-5 rounded-lg w-56 h-44">
-          <Image src={eye} alt={"Eye-off icon"} className="invert opacity-80" />
+          <Image src={eye} alt={"Eye-off icon"} className="opacity-80" />
           <p>
             Experience the most minimal and bloat-free experience with your privacy rights
           </p>
