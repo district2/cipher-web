@@ -1,7 +1,17 @@
-import { allPosts } from "@/.contentlayer/generated";
+import { Post, allPosts } from "@/.contentlayer/generated";
 import Mdx from "@/components/mdx";
 import { formatDate } from "@/lib/date";
 import { notFound } from "next/navigation";
+import { Metadata } from "next";
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+
+    const post = allPosts.filter((post) => post._raw.flattenedPath == params.slug)[0]
+
+    return {
+        title: post.title,
+    }
+}
 
 export function generateStaticParams() {
     return allPosts.map((post) => ({ slug: post._raw.flattenedPath }))

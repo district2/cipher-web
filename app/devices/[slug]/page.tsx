@@ -3,9 +3,13 @@ import { supabase } from "@/lib/supabase/supabase";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    const { data: device, error } = await supabase.from("device").select().eq("code_name", params.slug).single()
+    if (error)
+        throw new Error("Unable to fetch device")
+
     return {
-        title: params.slug,
+        title: device.name,
     }
 }
 

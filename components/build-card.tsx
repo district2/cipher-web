@@ -7,6 +7,7 @@ import Button from "./button";
 
 export default function BuildCard({ created_at, android_version, variant, version, download_link }:
     { created_at: string, android_version?: string, variant: "Vanilla" | "Gapps", version: string, download_link: string }) {
+
     return (
         <div className="flex flex-col gap-y-2 font-medium bg-neutral-950 p-6 rounded-lg">
             <div className="flex gap-x-3">

@@ -1,8 +1,11 @@
 import { allPosts } from "@/.contentlayer/generated"
 import PostCard from "@/components/post-card";
-import { formatDate } from "@/lib/date";
 import { compareDesc } from "date-fns";
-import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Blog"
+}
 
 export default function Blog() {
 
