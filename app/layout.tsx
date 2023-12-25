@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     template: "%s | CipherOS",
     default: "CipherOS"
   },
-  description: 'The official CipherOS Hub',
+  description: 'The official CipherOS Website',
 }
 
 export default function RootLayout({

@@ -22,7 +22,7 @@ export default function Home() {
             made for power users
           </h1>
         </div>
-        <Image src={mockupPhone} alt="phone mockup" className="hidden md:block w-auto max-h-[80vh]" />
+        <Image src={mockupPhone} alt="phone mockup" className="hidden md:block w-auto max-h-[80vh]" priority />
       </div>
       <div className="flex flex-wrap justify-center gap-5">
         <div className="bg-neutral-950 flex flex-col gap-y-4 p-5 rounded-lg w-56 h-44">
