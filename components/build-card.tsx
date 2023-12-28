@@ -8,24 +8,24 @@ import Button from "./button";
 export default function BuildCard({ created_at, android_version, variant, version, download_link }:
     { created_at: string, android_version?: string, variant: "Vanilla" | "Gapps", version: string, download_link: string }) {
 
+    const info =
+        new Array(
+            { image: calendar, name: "Date", value: created_at },
+            { image: versionImage, name: "Version", value: version },
+            { image: androidImage, name: "Android", value: android_version! },
+            { image: variantImage, name: "Variant", value: variant },
+        )
+
     return (
         <div className="flex flex-col gap-y-2 font-medium bg-neutral-950 p-6 rounded-lg">
-            <div className="flex gap-x-3">
-                <Image src={calendar} alt="calendar icon" />
-                <p className="text-white/70">Date: <span className="text-white">{created_at}</span></p>
-            </div>
-            <div className="flex gap-x-3">
-                <Image src={versionImage} alt="version icon" />
-                <p className="text-white/70">Version: <span className="text-white">{version}</span></p>
-            </div>
-            <div className="flex gap-x-3">
-                <Image src={androidImage} alt="android icon" />
-                <p className="text-white/70">Android: <span className="text-white">{android_version}</span></p>
-            </div>
-            <div className="flex gap-x-3">
-                <Image src={variantImage} alt="variant icon" />
-                <p className="text-white/70">Variant: <span className="text-white">{variant}</span></p>
-            </div>
+            {
+                info.map(({ image, name, value }, i) =>
+                    <div className="flex gap-x-3" key={i}>
+                        <Image src={image} alt={`${name} icon`} />
+                        <p className="text-white/70">{name}: <span className="text-white">{value}</span></p>
+                    </div>
+                )
+            }
             <Button text="Download" link={download_link} ext />
         </div>
     )
