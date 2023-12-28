@@ -25,7 +25,7 @@ export default function Navbar() {
                 <Link className="flex items-center" href={"/"}>
                     <Image
                         src={logo}
-                        alt='cipher logo'
+                        alt='CipherOS logo'
                         width={80}
                         height={80}
                     ></Image>
