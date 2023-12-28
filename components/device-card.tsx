@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function DeviceCard({ name, code_name, maintainer, date }:
     { name: string, code_name: string, maintainer: string, date?: string | undefined }) {
     return (
-        <Link className="w-60 h-52 relative bg-neutral-950 p-3 rounded-2xl transition-shadow ease-linear ring-neutral-500 hover:ring-1" href={`/devices/${code_name}`}>
+        <Link className="w-60 h-52 relative bg-neutral-950 p-3 rounded-2xl transition-shadow ease-linear ring-neutral-700 hover:ring" href={`/devices/${code_name}`}>
             <div className="absolute bottom-0 left-0" style={{ padding: "inherit" }}>
                 <p className="">
                     {name}
