@@ -46,6 +46,7 @@ const components = {
     a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
         <a
             className={"font-medium underline underline-offset-4"}
+            target="_blank"
             {...props}
         />
     ),
