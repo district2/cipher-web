@@ -4,42 +4,42 @@ const components = {
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h1
             className={
-                "mt-2 scroll-m-20 font-heading text-4xl font-bold"}
+                "mt-2 text-4xl font-bold scroll-m-20 font-heading"}
             {...props}
         />
     ),
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h2
             className={
-                "mt-12 scroll-m-20 font-heading text-2xl font-semibold tracking-tight first:mt-0"}
+                "mt-12 text-2xl font-semibold tracking-tight scroll-m-20 font-heading first:mt-0"}
             {...props}
         />
     ),
     h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h3
             className={
-                "mt-8 scroll-m-20 font-heading text-xl font-semibold tracking-tight"}
+                "mt-8 text-xl font-semibold tracking-tight scroll-m-20 font-heading"}
             {...props}
         />
     ),
     h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h4
             className={
-                "mt-8 scroll-m-20 font-heading text-lg font-semibold tracking-tight"}
+                "mt-8 text-lg font-semibold tracking-tight scroll-m-20 font-heading"}
             {...props}
         />
     ),
     h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h5
             className={
-                "mt-8 scroll-m-20 text-lg font-semibold tracking-tight"}
+                "mt-8 text-lg font-semibold tracking-tight scroll-m-20"}
             {...props}
         />
     ),
     h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h6
             className={
-                "mt-8 scroll-m-20 text-base font-semibold tracking-tight"}
+                "mt-8 text-base font-semibold tracking-tight scroll-m-20"}
             {...props}
         />
     ),
@@ -67,7 +67,7 @@ const components = {
     ),
     blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
         <blockquote
-            className="mt-6 border-l-2 pl-6 italic"
+            className="pl-6 mt-6 italic border-l-2"
             {...props}
         />
     ),
@@ -83,13 +83,13 @@ const components = {
         <hr className="my-4 md:my-8" {...props} />
     ),
     table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
-        <div className="my-6 w-full overflow-y-auto">
+        <div className="overflow-y-auto my-6 w-full">
             <table className="w-full" {...props} />
         </div>
     ),
     tr: ({ className, ...props }: React.HTMLAttributes<HTMLTableRowElement>) => (
         <tr
-            className="m-0 border-t p-0 even:bg-muted"
+            className="p-0 m-0 border-t even:bg-muted"
             {...props}
         />
     ),

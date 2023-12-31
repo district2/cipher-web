@@ -21,7 +21,7 @@ export default function Navbar() {
 
     return (
         <nav className="p-12" onClick={() => isShown ? setShown(!isShown) : ""}>
-            <div className="flex justify-between w-full items-center">
+            <div className="flex justify-between items-center w-full">
                 <Link className="flex items-center" href={"/"}>
                     <Image
                         src={logo}
@@ -29,11 +29,11 @@ export default function Navbar() {
                         width={80}
                         height={80}
                     ></Image>
-                    <h1 className="hidden md:block text-xl">
+                    <h1 className="hidden text-xl md:block">
                         <span className="font-bold">Cipher</span><span className="font-medium">OS</span>
                     </h1>
                 </Link>
-                <div className='hidden lg:flex gap-x-4'>
+                <div className='hidden gap-x-4 lg:flex'>
                     {items}
                 </div>
                 <div className="lg:hidden">
@@ -43,7 +43,7 @@ export default function Navbar() {
 
             {
                 isShown ?
-                    <div className="flex flex-col p-3 bg-neutral-900 rounded-lg w-full items-center lg:hidden">
+                    <div className="flex flex-col items-center p-3 w-full rounded-lg bg-neutral-900 lg:hidden">
                         {items}
                     </div>
                     :

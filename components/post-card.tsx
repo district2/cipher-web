@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function PostCard(post: Post) {
     return (
-        <Link href={post.url} className="w-60 h-24 bg-neutral-950 p-3 ring-neutral-700 transition-shadow ease-linear hover:ring rounded-lg">
+        <Link href={post.url} className="p-3 w-60 h-24 rounded-lg transition-shadow ease-linear bg-neutral-950 ring-neutral-700 hover:ring">
             <div className="break-words">
                 <h1 className="font-medium">
                     {post.title}

@@ -3,12 +3,12 @@ import FooterLink from "./footer-link";
 
 export default function Footer() {
     return (
-        <footer className="mt-48  bg-neutral-950/60 md:h-64 w-full relative">
-            <div className="flex flex-col gap-y-3 p-4 pb-20 items-center h-full md:justify-between md:flex-row md:px-16 md:pb-0">
-                <h1 className="font-medium text-2xl">
+        <footer className="relative mt-48 w-full bg-neutral-950/60 md:h-64">
+            <div className="flex flex-col gap-y-3 items-center p-4 pb-20 h-full md:justify-between md:flex-row md:px-16 md:pb-0">
+                <h1 className="text-2xl font-medium">
                     CipherOS
                 </h1>
-                <div className="flex flex-col md:flex-row gap-7">
+                <div className="flex flex-col gap-7 md:flex-row">
                     <div className="flex-col gap-y-3">
                         <h1 className="text-lg">
                             Navigation
@@ -31,7 +31,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <p className="absolute bottom-4 w-full text-center font-medium text-sm">
+            <p className="absolute bottom-4 w-full text-sm font-medium text-center">
                 Made by <Link href="https://github.com/district2" target="_blank" className="font-mono underline underline-offset-4">
                     district2
                 </Link>

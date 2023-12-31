@@ -12,8 +12,8 @@ export default function Blog() {
     const posts = allPosts.sort((a, b) => compareDesc(new Date(a.date), new Date(b.date)))
 
     return (
-        <div className="min-h-screen flex flex-col items-center p-20 gap-y-14">
-            <h1 className="text-4xl text-center bg-gradient-to-b from-neutral-600 to-gray-500 bg-clip-text text-transparent">
+        <div className="flex flex-col gap-y-14 items-center p-20 min-h-screen">
+            <h1 className="text-4xl text-center text-transparent bg-clip-text bg-gradient-to-b to-gray-500 from-neutral-600">
                 Read our news
             </h1>
             <div className="flex flex-wrap">

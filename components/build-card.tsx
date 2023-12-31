@@ -17,7 +17,7 @@ export default function BuildCard({ created_at, android_version, variant, versio
         )
 
     return (
-        <div className="flex flex-col gap-y-2 font-medium bg-neutral-950 p-6 rounded-lg">
+        <div className="flex flex-col gap-y-2 p-6 font-medium rounded-lg bg-neutral-950">
             {
                 info.map(([image, name, value], i) =>
                     <div className="flex gap-x-3" key={i}>

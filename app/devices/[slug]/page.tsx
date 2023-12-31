@@ -30,14 +30,14 @@ export default async function Device({ params }: { params: { slug: string } }) {
         throw new Error("Failed to fetch device data")
 
     return (
-        <main className="min-h-screen p-14">
-            <div className="flex flex-col justify-center items-center gap-24 w-full lg:flex-row">
-                <div className="flex flex-col gap-y-4 bg-neutral-950 p-8 rounded-xl">
+        <main className="p-14 min-h-screen">
+            <div className="flex flex-col gap-24 justify-center items-center w-full lg:flex-row">
+                <div className="flex flex-col gap-y-4 p-8 rounded-xl bg-neutral-950">
                     <div>
-                        <h1 className="font-medium text-2xl">
+                        <h1 className="text-2xl font-medium">
                             {device.name}
                         </h1>
-                        <h2 className="text-neutral-700 text-lg">
+                        <h2 className="text-lg text-neutral-700">
                             {device.code_name}
                         </h2>
                     </div>
@@ -48,10 +48,10 @@ export default async function Device({ params }: { params: { slug: string } }) {
                 </div>
                 {device.build && device.build.length != 0 ?
                     <div className="flex flex-col items-center">
-                        <h1 className="text-xl pb-4 font-medium">
+                        <h1 className="pb-4 text-xl font-medium">
                             Available builds
                         </h1>
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7">
+                        <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
                             {
                                 device.build.map((build, i) =>
                                     <BuildCard {...build} key={i} />

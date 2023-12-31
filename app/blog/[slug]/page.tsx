@@ -22,7 +22,7 @@ export default function Post({ params }: { params: { slug: string } }) {
     if (!post) notFound()
 
     return (
-        <article className="max-w-6xl mx-auto p-8 lg:p-16">
+        <article className="p-8 mx-auto max-w-6xl lg:p-16">
             <div className="flex flex-col gap-y-10 items-center">
                 <div className="flex flex-col w-full">
                     <h1 className="text-3xl font-medium">
@@ -33,7 +33,7 @@ export default function Post({ params }: { params: { slug: string } }) {
                             {formatDate(post.date)}
                         </h2>
                         <p>
-                            by <span className="text-white/80 font-medium">{post.author}</span>
+                            by <span className="font-medium text-white/80">{post.author}</span>
                         </p>
                     </div>
                 </div>
