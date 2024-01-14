@@ -7,6 +7,22 @@ import Image from "next/image"
 import MemberCard from "@/components/member-card"
 
 export default function Home() {
+
+  const features: Array<[any, string, string]> =
+    [
+      [ui, "UI icon", "New refreshed UI based on our custom 'seamless' design"],
+      [shield, "Shield icon", "Stay always up-to date with latest security patches"],
+      [battery, "Battery icon", "Background services are stripped down to minimal to preserve battery life"],
+      [eye, "Eye icon", "Experience the most minimal and bloat-free experience with your privacy rights"]
+    ]
+
+  const team = [
+    <MemberCard name="Alibei" role="Leader" image="https://avatars.githubusercontent.com/u/24531178" gitUsername="alibei" key={1} />,
+    <MemberCard name="Aryan Sinha" role="Leader" image="https://avatars.githubusercontent.com/u/63485082" gitUsername="techyminati" key={2} />,
+    <MemberCard name="Sarthak Roy" role="Developer" image="https://avatars.githubusercontent.com/u/47187468" gitUsername="sarthakroy2002" key={3} />,
+    <MemberCard name="District2" role="Developer" image="https://avatars.githubusercontent.com/u/111503426" gitUsername="district2" key={4} />
+  ]
+
   return (
     <main className="flex flex-col gap-y-36 justify-between items-center p-24 min-h-screen">
       <div className="flex flex-wrap gap-8 justify-center items-center w-full">
@@ -24,41 +40,26 @@ export default function Home() {
         </div>
         <Image src={mockupPhone} alt="phone mockup" className="hidden md:block w-auto max-h-[80vh]" priority />
       </div>
+
       <div className="flex flex-wrap gap-5 justify-center">
-        <div className="flex flex-col gap-y-4 p-5 w-56 h-44 rounded-lg bg-neutral-950">
-          <Image src={ui} alt={"User interface icon"} className="opacity-80" />
-          <p>
-            New refreshed UI based on our custom &apos;seamless&apos; design
-          </p>
-        </div>
-        <div className="flex flex-col gap-y-4 p-5 w-56 h-44 rounded-lg bg-neutral-950">
-          <Image src={shield} alt={"Shield icon"} className="opacity-80" />
-          <p>
-            Stay always up-to date with latest security patches
-          </p>
-        </div>
-        <div className="flex flex-col gap-y-4 p-5 w-56 h-44 rounded-lg bg-neutral-950">
-          <Image src={battery} alt={"Battery icon"} className="opacity-80" />
-          <p>
-            Background services are stripped down to minimal to preserve battery life
-          </p>
-        </div>
-        <div className="flex flex-col gap-y-4 p-5 w-56 h-44 rounded-lg bg-neutral-950">
-          <Image src={eye} alt={"Eye-off icon"} className="opacity-80" />
-          <p>
-            Experience the most minimal and bloat-free experience with your privacy rights
-          </p>
-        </div>
+        {
+          features.map(([image, alt, description], i) =>
+            <div className="flex flex-col gap-y-4 p-5 w-56 h-44 rounded-lg bg-neutral-950" key={i}>
+              <Image src={image} alt={alt} className="opacity-80" />
+              <p>
+                {description}
+              </p>
+            </div>
+          )
+        }
       </div>
+
       <div className="flex flex-col gap-y-20 items-center">
         <h1 className="text-3xl font-medium text-center">
           Behind the scenes
         </h1>
         <div className="flex flex-wrap gap-10 justify-center">
-          <MemberCard name="Alibei" role="Leader" image="https://avatars.githubusercontent.com/u/24531178" gitUsername="alibei" />
-          <MemberCard name="Aryan Sinha" role="Leader" image="https://avatars.githubusercontent.com/u/63485082" gitUsername="techyminati" />
-          <MemberCard name="Sarthak Roy" role="Developer" image="https://avatars.githubusercontent.com/u/47187468" gitUsername="sarthakroy2002" />
-          <MemberCard name="District2" role="Developer" image="https://avatars.githubusercontent.com/u/111503426" gitUsername="district2" />
+          {team}
         </div>
       </div>
     </main>
