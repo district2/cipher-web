@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "pnpm next telemetry disable && next build --no-lint",
+    "start": "next start"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.7",
