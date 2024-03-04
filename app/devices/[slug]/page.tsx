@@ -53,12 +53,12 @@ export default async function Device({ params }: { params: { slug: string } }) {
 						<span className="font-medium text-white">{device.maintainer}</span>
 					</p>
 				</div>
-				{device.build && device.build.length != 0 ? (
+				{device.build && device.build.length !== 0 ? (
 					<div className="flex flex-col items-center">
 						<h1 className="pb-4 text-xl font-medium">Available builds</h1>
 						<div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
-							{device.build.map((build, i) => (
-								<BuildCard {...build} key={i} />
+							{device.build.map((build) => (
+								<BuildCard {...build} key={build.id} />
 							))}
 						</div>
 					</div>

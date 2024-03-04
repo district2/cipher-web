@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function MemberCard({
 	name,
-	role,
+	projectRole,
 	image,
 	gitUsername,
-}: { name: string; role: string; image: string; gitUsername: string }) {
+}: { name: string; projectRole: string; image: string; gitUsername: string }) {
 	return (
 		<Link
 			href={`https://github.com/${gitUsername}`}
@@ -23,7 +23,7 @@ export default function MemberCard({
 				/>
 				<div className="ml-auto text-center">
 					<h1>{name}</h1>
-					<p className="text-sm text-white/50">{role}</p>
+					<p className="text-sm text-white/50">{projectRole}</p>
 				</div>
 			</div>
 		</Link>

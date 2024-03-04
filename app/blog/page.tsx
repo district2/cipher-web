@@ -18,8 +18,8 @@ export default function Blog() {
 				Read our news
 			</h1>
 			<div className="flex flex-wrap">
-				{posts.map((post, i) => (
-					<PostCard {...post} key={i} />
+				{posts.map((post) => (
+					<PostCard {...post} key={post._id} />
 				))}
 			</div>
 		</div>

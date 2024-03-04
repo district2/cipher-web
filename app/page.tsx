@@ -6,7 +6,7 @@ import ui from "@/public/icons/ui.svg";
 import mockupPhone from "@/public/images/mockup.webp";
 import Image from "next/image";
 
-const FEATURES: Array<[any, string, string]> = [
+const FEATURES: Array<[string, string, string]> = [
 	[ui, "UI icon", "New refreshed UI based on our custom 'seamless' design"],
 	[
 		shield,
@@ -28,28 +28,28 @@ const FEATURES: Array<[any, string, string]> = [
 const TEAM = [
 	<MemberCard
 		name="Alibei"
-		role="Leader"
+		projectRole="Leader"
 		image="https://avatars.githubusercontent.com/u/24531178"
 		gitUsername="alibei"
 		key={1}
 	/>,
 	<MemberCard
 		name="Aryan Sinha"
-		role="Leader"
+		projectRole="Leader"
 		image="https://avatars.githubusercontent.com/u/63485082"
 		gitUsername="techyminati"
 		key={2}
 	/>,
 	<MemberCard
 		name="Sarthak Roy"
-		role="Developer"
+		projectRole="Developer"
 		image="https://avatars.githubusercontent.com/u/47187468"
 		gitUsername="sarthakroy2002"
 		key={3}
 	/>,
 	<MemberCard
 		name="District2"
-		role="Developer"
+		projectRole="Developer"
 		image="https://avatars.githubusercontent.com/u/111503426"
 		gitUsername="district2"
 		key={4}
@@ -79,10 +79,10 @@ export default function Home() {
 			</div>
 
 			<div className="flex flex-wrap gap-5 justify-center">
-				{FEATURES.map(([image, alt, description], i) => (
+				{FEATURES.map(([image, alt, description]) => (
 					<div
 						className="flex flex-col gap-y-4 p-5 w-56 h-44 rounded-lg bg-neutral-950"
-						key={i}
+						key={alt}
 					>
 						<Image src={image} alt={alt} className="opacity-80" />
 						<p>{description}</p>

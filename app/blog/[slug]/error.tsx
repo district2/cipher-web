@@ -3,7 +3,7 @@
 import ErrorButton from "@/components/error-button";
 import { useEffect } from "react";
 
-export default function Error({
+export default function error({
 	error,
 	reset,
 }: {

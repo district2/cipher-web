@@ -8,7 +8,7 @@ export function generateMetadata({
 	params,
 }: { params: { slug: string } }): Metadata {
 	const post = allPosts.filter(
-		(post) => post._raw.flattenedPath == params.slug,
+		(post) => post._raw.flattenedPath === params.slug,
 	)[0];
 
 	return {

@@ -10,7 +10,7 @@ export default function NotFound() {
 				</p>
 			</div>
 			<Link
-				className={`px-5 py-2 text-lg font-medium rounded-lg transition-colors duration-300 text-white/80 hover:bg-neutral-800/70 hover:text-white lg:text-xl`}
+				className={"px-5 py-2 text-lg font-medium rounded-lg transition-colors duration-300 text-white/80 hover:bg-neutral-800/70 hover:text-white lg:text-xl"}
 				href={"/blog"}
 			>
 				&lt;- Go back to blog

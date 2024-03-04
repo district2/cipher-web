@@ -19,12 +19,12 @@ export default async function Pages() {
 				Bring a new life to your device
 			</h1>
 			<div className="flex flex-wrap gap-6 justify-center">
-				{devices.map((device, i) => (
+				{devices.map((device) => (
 					<DeviceCard
 						name={device.name}
 						code_name={device.code_name}
 						maintainer={device.maintainer}
-						key={i}
+						key={device.id}
 						date={device.build.at(-1)?.created_at}
 					/>
 				))}
