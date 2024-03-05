@@ -25,7 +25,7 @@ export default function BuildCard(build: Build) {
 			{info.map(([image, name, value]) => (
 				<div className="flex gap-x-3" key={name}>
 					<Image src={image} alt={`${name} icon`} />
-					<div className="text-white/70">
+					<div className="text-white/70 overflow-auto">
 						{name}: <span className="text-white">{value}</span>
 					</div>
 				</div>
