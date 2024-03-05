@@ -46,7 +46,7 @@ export default async function Device({ params }: { params: { slug: string } }) {
 				{builds && builds.length !== 0 ? (
 					<div className="flex flex-col items-center">
 						<h1 className="pb-7 text-xl font-medium">Available builds</h1>
-						<div className="grid grid-cols-1 gap-7 xl:grid-cols-2">
+						<div className={`grid grid-cols-1 gap-7 ${builds.length === 1 ? "xl:grid-cols-none" : "xl:grid-cols-2"}`}>
 							{builds.map((build) => (
 								<BuildCard {...build} key={build.checksum} />
 							))}
