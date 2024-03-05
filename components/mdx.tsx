@@ -70,8 +70,7 @@ const components = {
 		alt,
 		...props
 	}: React.ImgHTMLAttributes<HTMLImageElement>) => (
-		// eslint-disable-next-line @next/next/no-img-element
-		<img className="rounded-md" alt={alt} {...props} />
+		<img className="rounded-md" alt={alt} {...props} aria-label={alt} />
 	),
 	hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
 		<hr className="my-4 md:my-8" {...props} />

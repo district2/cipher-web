@@ -14,26 +14,26 @@ export default function Navbar() {
 	const pathName = usePathname();
 
 	const items = [
-		<NavItem name="Home" link="/" active={pathName == "/"} key={"home"} />,
+		<NavItem name="Home" link="/" active={pathName === "/"} key={"home"} />,
 		<NavItem
 			name="Devices"
 			link="/devices"
-			active={pathName == "/devices"}
+			active={pathName === "/devices"}
 			key={"devices"}
 		/>,
 		<NavItem
 			name="Blog"
 			link="/blog"
-			active={pathName == "/blog"}
+			active={pathName === "/blog"}
 			key={"blog"}
 		/>,
 	];
 
 	return (
-		<nav className="p-12" onClick={() => (isShown ? setShown(!isShown) : "")}>
+		<nav className="p-12" onKeyDown={() => (isShown ? setShown(!isShown) : "")}>
 			<div className="flex justify-between items-center w-full">
 				<Link className="flex items-center" href={"/"}>
-					<Image src={logo} alt="CipherOS logo" width={80} height={80}></Image>
+					<Image src={logo} alt="CipherOS logo" width={80} height={80} />
 					<h1 className="hidden text-xl md:block">
 						<span className="font-bold">Cipher</span>
 						<span className="font-medium">OS</span>
@@ -46,7 +46,7 @@ export default function Navbar() {
 						alt="menu icon"
 						className="cursor-pointer"
 						onClick={() => setShown(!isShown)}
-					></Image>
+					/>
 				</div>
 			</div>
 
