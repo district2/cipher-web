@@ -1,11 +1,8 @@
 import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
-// import { Inter } from 'next/font/google'
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import "./globals.css";
-
-// const inter = Inter({ subsets: ['latin'] })
 
 export const revalidate = 300;
 
@@ -32,12 +29,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" >
 			<body className={GeistSans.className}>
 				<Navbar />
 				{children}
 				<Footer />
 			</body>
-		</html>
+		</html >
 	);
 }
