@@ -10,6 +10,7 @@ import "./globals.css";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
+	metadataBase: new URL('https://cipher.online'),
 	title: {
 		template: "%s | CipherOS",
 		default: "CipherOS",
