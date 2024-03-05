@@ -15,6 +15,14 @@ export const metadata: Metadata = {
 		default: "CipherOS",
 	},
 	description: "The official CipherOS Website",
+	openGraph: {
+		type: "website",
+		title: "CipherOS",
+		siteName: "CipherOS",
+		url: "https://cipheros.online",
+		description: "The official CipherOS Website",
+	}
+
 };
 
 export default function RootLayout({
