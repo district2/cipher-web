@@ -19,7 +19,7 @@ export default function BuildCard(build: Build) {
 
 	return (
 		<div className="flex flex-col gap-y-2 p-6 font-medium rounded-lg bg-neutral-950 relative">
-			<p className="absolute -top-3 -left-3 font-bold tracking-widest">
+			<p className="absolute -top-3 -left-5 font-bold tracking-widest">
 				{build.romtype}
 			</p>
 			{info.map(([image, name, value]) => (
