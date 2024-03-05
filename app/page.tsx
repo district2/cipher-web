@@ -3,7 +3,7 @@ import battery from "@/public/icons/battery.svg";
 import eye from "@/public/icons/eye.svg";
 import shield from "@/public/icons/shield.svg";
 import ui from "@/public/icons/ui.svg";
-import mockupPhone from "@/public/images/mockup.webp";
+import deviceFrame from "@/public/images/deviceFrame.webp";
 import Image from "next/image";
 
 const FEATURES: Array<[string, string, string]> = [
@@ -71,7 +71,7 @@ export default function Home() {
 					</h1>
 				</div>
 				<Image
-					src={mockupPhone}
+					src={deviceFrame}
 					alt="phone mockup"
 					className="hidden md:block w-auto max-h-[80vh]"
 					priority
