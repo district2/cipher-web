@@ -42,7 +42,7 @@ export async function getDeviceBuilds(codename: string) {
 		throw new Error(`Unable to fetch ${codename} content from GitLab API`);
 	}
 
-	return (
-		JSON.parse(atob((await req.json()).content)).response as RawBuild[]
-	).map((rawBuild) => beautifyBuild(rawBuild));
+	return (JSON.parse(atob((await req.json()).content)).response as RawBuild[])
+		.filter((rawBuild) => rawBuild.romtype !== "INTERNAL")
+		.map((rawBuild) => beautifyBuild(rawBuild));
 }
