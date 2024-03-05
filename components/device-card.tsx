@@ -17,7 +17,7 @@ export default function DeviceCard({
 			href={`/devices/${code_name}`}
 		>
 			<div className="absolute bottom-0 left-0" style={{ padding: "inherit" }}>
-				<p className="">{name}</p>
+				<p>{name}</p>
 				<p className="text-neutral-700">{code_name}</p>
 			</div>
 			<div>

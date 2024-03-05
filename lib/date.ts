@@ -1,5 +1,8 @@
-import { format, parseISO } from "date-fns";
+import { format, fromUnixTime, parseISO } from "date-fns";
 
-export function formatDate(date: string) {
-	return format(parseISO(date), "LLLL d, yyyy");
+export function formatDate(date: string | number) {
+	return format(
+		typeof date === "string" ? parseISO(date) : fromUnixTime(date),
+		"LLL d, yyyy",
+	);
 }

@@ -1,5 +1,5 @@
 import DeviceCard from "@/components/device-card";
-import { supabase } from "@/lib/supabase/supabase";
+import { getDeviceBuilds, getDevices } from "@/lib/api/api";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -7,11 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Pages() {
-	const { data: devices, error } = await supabase
-		.from("device")
-		.select("*, build(*)");
-
-	if (!devices || error) throw new Error("Unable to fetch devices");
+	const devices = await getDevices()
 
 	return (
 		<main className="flex flex-col gap-y-24 p-12 min-h-screen">
@@ -19,15 +15,20 @@ export default async function Pages() {
 				Bring a new life to your device
 			</h1>
 			<div className="flex flex-wrap gap-6 justify-center">
-				{devices.map((device) => (
-					<DeviceCard
-						name={device.name}
-						code_name={device.code_name}
-						maintainer={device.maintainer}
-						key={device.id}
-						date={device.build.at(-1)?.created_at}
-					/>
-				))}
+				{devices.map(async (device) => {
+
+					const builds = await getDeviceBuilds(device.codename)
+
+					return (
+						<DeviceCard
+							name={device.name}
+							code_name={device.codename}
+							maintainer={device.maintainer.nickname}
+							date={builds.pop()?.date}
+							key={device.codename}
+						/>
+					)
+				})}
 			</div>
 		</main>
 	);
