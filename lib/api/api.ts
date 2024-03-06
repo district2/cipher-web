@@ -46,3 +46,16 @@ export async function getDeviceBuilds(codename: string) {
 		.filter((rawBuild) => rawBuild.romtype !== "INTERNAL")
 		.map((rawBuild) => beautifyBuild(rawBuild));
 }
+
+export async function getDevicesWithBuilds() {
+	const devices = await getDevices();
+
+	const devicesWithBuilds: Device[] = [];
+
+	for (const device of devices) {
+		const builds = await getDeviceBuilds(device.codename);
+		device.builds = builds;
+		devicesWithBuilds.push(device);
+	}
+	return devicesWithBuilds;
+}

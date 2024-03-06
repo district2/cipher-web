@@ -2,6 +2,7 @@ export interface Device {
 	name: string;
 	codename: string;
 	maintainer: Maintainer;
+	builds: Build[];
 }
 
 interface Maintainer {
