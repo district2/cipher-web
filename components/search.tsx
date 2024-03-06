@@ -9,7 +9,7 @@ interface SearchProps {
 export default function Search({ devices, setDevices }: SearchProps) {
     return (
         <input
-            className="bg-transparent p-3 border rounded-lg border-neutral-800 w-52 md:w-72 transition-colors ease-linear text-neutral-300 focus:outline-none focus:border-neutral-400 "
+            className="bg-transparent p-3 border-2 rounded-lg border-neutral-800 w-52 md:w-72 transition-colors ease-linear text-neutral-300 focus:outline-none focus:border-neutral-400 "
             type="text"
             placeholder="Search device"
             aria-label="Search device"
