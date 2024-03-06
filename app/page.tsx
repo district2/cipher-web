@@ -73,9 +73,8 @@ export default function Home() {
 				<Image
 					src={deviceFrame}
 					alt="phone mockup"
-					className="w-auto max-h-[50vh] lg:max-h-[60vh] xl:max-h-[70vh]"
+					className="w-auto max-h-[45vh] lg:max-h-[60vh] xl:max-h-[70vh]"
 					priority
-					quality={100}
 				/>
 			</div>
 
