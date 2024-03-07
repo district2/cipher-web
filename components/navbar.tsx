@@ -22,6 +22,12 @@ export default function Navbar() {
 			key={"devices"}
 		/>,
 		<NavItem
+			name="Gallery"
+			link="/gallery"
+			active={pathName === "/gallery"}
+			key={"gallery"}
+		/>,
+		<NavItem
 			name="Blog"
 			link="/blog"
 			active={pathName === "/blog"}
