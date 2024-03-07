@@ -22,7 +22,6 @@ const SOFTWARE_SECTIONS: SectionProps[] = [
     { isSoftwareSection: true, title: "5. Entire Agreement", content: "This Agreement constitutes the entire agreement between you and the CipherOS project team, superseding any prior agreements, whether oral or written." },
     { isSoftwareSection: true, title: "6. Waiver", content: "No waiver of any term or condition shall be deemed a continuing waiver." },
     { isSoftwareSection: true, title: "7. Severability", content: "If any provision is found to be invalid or unenforceable, that provision shall be enforced to the maximum extent possible, and the remaining provisions shall remain in full force and effect." },
-
 ]
 
 export default function Legal() {
