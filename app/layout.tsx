@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 import "./globals.css";
+import GoogleAnalytics from "@/components/google-analytics";
 
 export const revalidate = 300;
 
@@ -31,6 +32,10 @@ export default function RootLayout({
 	return (
 		<html lang="en" >
 			<body className={GeistSans.className}>
+				{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+					<GoogleAnalytics ga_id=
+						{process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+				) : null}
 				<Navbar />
 				{children}
 				<Footer />
