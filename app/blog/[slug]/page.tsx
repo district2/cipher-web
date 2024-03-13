@@ -1,7 +1,7 @@
 import { allPosts } from "@/.contentlayer/generated/index.mjs";
-import Mdx from "@/components/mdx";
 import { formatDate } from "@/lib/date";
 import { Metadata } from "next";
+import { getMDXComponent } from "next-contentlayer/hooks";
 import { notFound } from "next/navigation";
 
 export function generateMetadata({
@@ -23,9 +23,10 @@ export function generateStaticParams() {
 export default function Post({ params }: { params: { slug: string } }) {
 	const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 	if (!post) notFound();
+	const Content = getMDXComponent(post.body.code)
 
 	return (
-		<article className="p-8 mx-auto max-w-6xl lg:p-16">
+		<div className="p-8 mx-auto max-w-6xl lg:p-16">
 			<div className="flex flex-col gap-y-10 items-center">
 				<div className="flex flex-col w-full">
 					<h1 className="text-3xl font-medium">{post.title}</h1>
@@ -37,8 +38,10 @@ export default function Post({ params }: { params: { slug: string } }) {
 						</p>
 					</div>
 				</div>
-				<Mdx code={post.body.code} />
+				<article className="prose prose-invert">
+					<Content />
+				</article>
 			</div>
-		</article>
+		</div>
 	);
 }
