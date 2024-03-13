@@ -1,3 +1,4 @@
+import GradientText from "@/components/gradient-text"
 import { readdir } from "fs/promises"
 import Image from "next/image"
 
@@ -7,9 +8,7 @@ export default async function Gallery() {
 
     return (
         <div className="min-h-screen flex flex-col gap-y-14 p-12 items-center">
-            <h1 className="text-3xl lg:text-4xl text-center text-transparent bg-clip-text bg-gradient-to-b to-gray-500 from-neutral-600">
-                Check our sexy views
-            </h1>
+            <GradientText text="Check our sexy views" />
             <div className="flex flex-wrap gap-12 justify-center">
                 {
                     files.map((image, i) =>

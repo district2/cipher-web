@@ -10,3 +10,10 @@ body {
 .text-error{
   @apply bg-gradient-to-b from-gray-600 to-red-600 bg-clip-text text-transparent;
 }
+
+@layer components{
+  .cipher-gradient{
+    @apply text-transparent bg-clip-text bg-gradient-to-b to-gray-500 from-neutral-600;
+  }
+
+}

@@ -56,13 +56,14 @@ const TEAM = [
 	/>,
 ];
 
+
 export default function Home() {
 	return (
 		<main className="flex flex-col gap-y-36 justify-between items-center px-24 min-h-screen">
 			<div className="flex flex-wrap gap-8 justify-center items-center w-full">
 				<div className="flex flex-col">
 					<h2 className="text-3xl xl:text-5xl">CipherOS</h2>
-					<h1 className="w-full text-3xl text-transparent bg-clip-text bg-gradient-to-b to-gray-500 from-neutral-600 lg:text-4xl xl:text-6xl">
+					<h1 className="w-full text-3xl cipher-gradient lg:text-4xl xl:text-6xl">
 						The ultimate
 						<br />
 						Android experience
