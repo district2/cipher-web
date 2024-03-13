@@ -2,18 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply text-white;
-  @apply bg-black
-}
-
-.text-error{
-  @apply bg-gradient-to-b from-gray-600 to-red-600 bg-clip-text text-transparent;
+@layer base{
+  body {
+    @apply text-white;
+    @apply bg-black
+  }
 }
 
 @layer components{
+  .text-error{
+    @apply bg-gradient-to-b from-gray-600 to-red-600 bg-clip-text text-transparent;
+  }
+
   .cipher-gradient{
     @apply text-transparent bg-clip-text bg-gradient-to-b to-gray-500 from-neutral-600;
   }
-
 }
+
+
